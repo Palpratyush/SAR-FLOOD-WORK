@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAR-NAVIS | Flood Impact & Route Intelligence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    position:absolute;
+    width:100%;
+    z-index:10;
+    color:white;
+}
+
+header h2{
+    margin:0;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-size:14px;
+}
+
+/* ===== HERO ===== */
+.hero{
+    position:relative;
+    height:60vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:750px;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:14px;
+    margin-bottom:25px;
+    opacity:0.9;
+}
+
+/* ===== BUTTONS ===== */
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 22px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.primary{
+    background:white;
+    color:#0d47a1;
+}
+
+.primary:hover{
+    background:#e3f2fd;
+}
+
+.secondary{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+}
+
+.secondary:hover{
+    background:white;
+    color:#0d47a1;
+}
+
+/* ===== CONTENT SECTION ===== */
+.content{
+    background:#ffffff;
+    color:#333;
+    padding:60px 20px;
+}
+
+.content-wrapper{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.content h2{
+    color:#0d47a1;
+    margin-top:35px;
+    font-size:20px;
+}
+
+.content h3{
+    color:#1976d2;
+    margin-top:20px;
+    font-size:16px;
+}
+
+.content p{
+    font-size:14px;
+    line-height:1.7;
+    margin-top:10px;
+}
+
+.content ul{
+    padding-left:18px;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.content li{
+    margin-bottom:6px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:#000;
+    color:#aaa;
+    padding:60px 10% 25px 10%;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-title{
+    color:#ffffff;
+    font-size:22px;
+    margin-bottom:8px;
+    font-weight:700;
+}
+
+.footer-tagline{
+    color:#777;
+    max-width:400px;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.footer-right{
+    display:flex;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.footer-section h3{
+    color:#00e5ff;
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+.footer-section p{
+    margin:6px 0;
+    font-size:13px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.footer-section p:hover{
+    color:#ffffff;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    font-size:12px;
+    color:#666;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:22px;
+    }
+    .footer-container{
+        flex-direction:column;
+    }
+    .footer-right{
+        flex-direction:column;
+        gap:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h2>SAR-NAVIS</h2>
+    
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <video autoplay muted loop playsinline>
+        <source src="videos/about-arcgis-hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>Cloud-Based SAR Flood Impact and Route Analysis Using Web GIS</h1>
+        <p>Synthetic Aperture Radar – Navigation & Vulnerability Intelligence System</p>
+
+        <div class="buttons">
+            <a class="btn primary"
+               href="C:\Users\Pratyush\Desktop\Projects\Science day\SAR Processing.html"
+               target="_blank">
+               SAR Processing
+            </a>
+
+            <a class="btn secondary"
+               href="C:\Users\Pratyush\Desktop\Projects\Science day\Road Analysis.html"
+               target="_blank">
+               Road Block & Route Analysis
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+<div class="content-wrapper">
+
+<h2>🌍 Project Overview</h2>
+<p>
+This project presents an integrated framework that combines satellite-based flood detection,
+transportation network vulnerability assessment, and web-based visualization to support disaster response planning.
+</p>
+
+<p>
+Sentinel-1 SAR data enables flood mapping under all-weather conditions through
+backscatter analysis of pre- and post-event imagery.
+</p>
+
+<p>
+Flood extent is integrated with OpenStreetMap (OSM) road data to identify submerged
+road segments and evaluate transportation disruption.
+</p>
+
+<p>
+A graph-based network model simulates connectivity loss and generates safe
+alternative routes using shortest-path algorithms.
+</p>
+
+<h2>🎯 Objectives</h2>
+<ul>
+<li>Flood detection using SAR backscatter analysis</li>
+<li>Identification of submerged road segments</li>
+<li>Quantification of transportation network disruption</li>
+<li>Generation of safe alternative routes</li>
+<li>Development of a Web GIS visualization platform</li>
+</ul>
+
+<h2>🛰 Methodology</h2>
+
+<h3>A. Flood Detection Using SAR</h3>
+<ul>
+<li>Acquisition of pre-event and post-event Sentinel-1 imagery</li>
+<li>VV polarization backscatter analysis</li>
+<li>Threshold-based flood classification</li>
+<li>Binary flood mask generation</li>
+</ul>
+
+<h3>B. Road Network Impact Assessment</h3>
+<ul>
+<li>Extraction of OpenStreetMap road network data</li>
+<li>Spatial intersection of flood and road layers</li>
+<li>Identification of submerged segments</li>
+<li>Calculation of affected road length and disruption percentage</li>
+</ul>
+
+<h3>C. Network Analysis & Routing</h3>
+<ul>
+<li>Graph construction based on road connectivity</li>
+<li>Removal of flooded road segments</li>
+<li>Recalculation of shortest safe routes</li>
+<li>Comparative route efficiency analysis</li>
+</ul>
+
+<h2>📊 Key Outcomes</h2>
+<ul>
+<li>Accurate flood extent mapping</li>
+<li>Quantified infrastructure impact</li>
+<li>Transportation network disruption estimation</li>
+<li>Identification of safe emergency routes</li>
+<li>Integrated Web GIS visualization dashboard</li>
+</ul>
+
+<h2>💡 Significance</h2>
+<p>
+This framework demonstrates how remote sensing and spatial network analysis enhance
+disaster preparedness and response planning.
+</p>
+
+<p>
+The SAR-based flood detection integrated with transportation modeling provides
+a scalable and near real-time solution for emergency mobility management.
+</p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+<h2 class="footer-title">SAR-NAVIS</h2>
+<p class="footer-tagline">
+Synthetic Aperture Radar – Navigation & Vulnerability Intelligence System
+</p>
+</div>
+
+<div class="footer-right">
+
+<div class="footer-section">
+<h3>LOCATION</h3>
+<p>📍 Savitribai Phule Pune University, Pune</p>
+<p>Department of Geography</p>
+</div>
+
+<div class="footer-section">
+<h3>LINKS</h3>
+<p>Google Earth Engine</p>
+<p>Google Colab</p>
+<p>GitHub</p>
+</div>
+
+</div>
+</div>
+
+<div class="footer-bottom">
+SAR-NAVIS | © 2025 MSc Geoinformatics | Science Day Project | Pratyush Pal,Tina Khatun
+</div>
+
+</footer>
+
+</body>
+</html>
